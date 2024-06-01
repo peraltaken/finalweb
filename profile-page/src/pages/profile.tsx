@@ -4,7 +4,8 @@ import { Formik, Form, Field } from 'formik';
 import useSWR, { mutate } from 'swr';
 import axios from 'axios';
 import Main from '@/layout/mainLayout';
-import { useRouter } from 'next/router'; 
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const fetcher = (url: string) => axios.get(url).then(res => res.data);
 
@@ -22,15 +23,15 @@ const ProfilePage: React.FC = () => {
       <Container maxWidth="md">
       <div className='container mx-auto flex justify-center items-center'>
         <nav className='flex justify-end'>
-          <a href="/" className='mx-8'>
+          <Link href="/" className='mx-8'>
             Home
-          </a>
-          <a href="/profile" className='mx-8'>
+          </Link>
+          <Link href="/profile" className='mx-8'>
             Profile
-          </a>
-          <a href="/posts" className='mx-8'>
+          </Link>
+          <Link href="/posts" className='mx-8'>
             Posts
-          </a>
+          </Link>
         </nav>
       </div>
         <Card>

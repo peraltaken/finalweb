@@ -6,6 +6,7 @@ import axios from 'axios';
 import Main from '@/layout/mainLayout';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const fetcher = (url: string) => axios.get(url).then(res => res.data);
 
@@ -56,15 +57,15 @@ const ProfilePage: React.FC = () => {
       <Container className='w-full flex justify-center'>
       <div className='container mx-auto flex justify-center items-center'>
         <nav className='flex justify-end'>
-          <a href="/" className='mx-8'>
+          <Link href="/" className='mx-8'>
             Home
-          </a>
-          <a href="/profile" className='mx-8'>
+          </Link>
+          <Link href="/profile" className='mx-8'>
             Profile
-          </a>
-          <a href="/posts" className='mx-8'>
+          </Link>
+          <Link href="/posts" className='mx-8'>
             Posts
-          </a>
+          </Link>
         </nav>
       </div>
         <Card style={{ width: '90%', maxWidth: '800px', marginTop: '2rem', backgroundColor: '#f3f3f3' }}>

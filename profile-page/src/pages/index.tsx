@@ -33,15 +33,15 @@ const Home: React.FC = () => {
       <Container className='profile-section'>
       <div className='container mx-auto flex justify-center items-center'>
         <nav className='flex justify-end'>
-          <a href="/" className='mx-8'>
+          <Link href="/" className='mx-8'>
             Home
-          </a>
-          <a href="/profile" className='mx-8'>
+          </Link>
+          <Link href="/profile" className='mx-8'>
             Profile
-          </a>
-          <a href="/posts" className='mx-8'>
+          </Link>
+          <Link href="/posts" className='mx-8'>
             Posts
-          </a>
+          </Link>
         </nav>
       </div>
         <Card style={{ padding: '2rem', marginTop: '2rem', width: '80%', maxWidth: '800px', margin: 'auto' }}>
